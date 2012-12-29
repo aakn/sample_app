@@ -12,6 +12,7 @@ group :development, :test do
   gem 'guard-rspec', '2.3.3'
   gem 'sqlite3'
   gem 'annotate', '2.5.0'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 # Gems used only for assets and not required

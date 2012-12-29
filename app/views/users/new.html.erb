@@ -1,11 +1,47 @@
-<% provide(:title, 'Sign Up') %>
-<div class="center hero-unit">
-	<h1>Sign Up</h1>
-	<p>
-	  This is the sign up page for the
-	  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-	  sample application.
-	</p>
-</div>
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
 
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<div class="row-fluid">
+  <div class="span6 offset3">
+  	<div class="well well-large">
+  		
+	    <%= form_for(@user, :html => { :class => "form-horizontal"} ) do |f| %>
+	    	<%= render 'shared/error_messages' %>
+
+		    <div class="control-group">
+				<%= f.label :name, class: "control-label" %>
+				<div class="controls">
+					<%= f.text_field :name, size: nil %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :email, class: "control-label" %>
+				<div class="controls">
+					<%= f.text_field :email, size: nil %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :password, class: "control-label" %>
+				<div class="controls">
+					<%= f.password_field :password, size: nil %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :password_confirmation, "Confirmation", class: "control-label" %>
+				<div class="controls">
+					<%= f.password_field :password_confirmation, size: nil %>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+				</div>
+			</div>
+	    <% end %>
+		
+	</div>
+  </div>
+</div>
