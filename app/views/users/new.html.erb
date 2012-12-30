@@ -1,7 +1,7 @@
 <% provide(:title, 'Sign Up') %>
-<h1>Sign Up</h1>
 
 <div class="row-fluid">
+  <%= page_header(yield(:title)) %>
   <div class="span6 offset3">
   	<div class="well well-large">
   		
@@ -37,7 +37,7 @@
 			</div>
 			<div class="control-group">
 				<div class="controls">
-					<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+					<%= f.submit "Create my account", class: "btn btn-primary" %>
 				</div>
 			</div>
 	    <% end %>

@@ -1,14 +1,7 @@
 <% provide(:title, 'All users') %>
 
-<header class="jumbotron subhead" id="overview">
-	<div class="row-fluid">
-		<div class="span12 page-header">
-			<h1>All users</h1>
-		</div>
-	</div>
-</header>
-
 <div class="row-fluid">
+	<%= page_header(yield(:title)) %>
 	<div class="span8 offset2">
 		<div class="well well-large">
 			<center><%= will_paginate %></center>
